@@ -29,7 +29,7 @@ Linux myhostname 6.8.4-300.fc40.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Apr  4 20:41:3
 ### Things with minor quirks
 
 - Nvidia GPU: had to disable it in BIOS to complete installation. Once the system was up and running I installed the drivers following [these instructions form RPM Fusion](https://rpmfusion.org/Howto/NVIDIA#OSTree_.28Silverblue.2FKinoite.2Fetc.29) and after that I was able to re-enable the card in BIOS and it works fine.
-- Sound: it seems like the driver only enables the twitters and keeps the main speakers off, as a result you hear only the higher frequencies at a low volume. This is [a known bug](https://bugzilla.kernel.org/show_bug.cgi?id=217449) that is already addressed (newer kernels will "just work") and has an easy workaround. See [this attached script](https://bugzilla.kernel.org/attachment.cgi?id=304763) in that bug. I run it on boot using "2" as the parameter (that is the bus number on my model). So a simple `sudo ./2pa-byps.sh 2` fixes it and the sound is amazing.
+- Sound: it seems like the driver only enables the twitters and keeps the main speakers off, as a result you hear only the higher frequencies at a low volume. This is [a known bug](https://bugzilla.kernel.org/show_bug.cgi?id=217449) that is already addressed (newer kernels will "just work") and has an easy workaround. See [this attached script](https://bugzilla.kernel.org/attachment.cgi?id=304763) in that bug. I run it on boot using "2" as the parameter (that is the bus number on my model). So a simple `sudo ./2pa-byps.sh 2` fixes it and the sound is amazing. UPDATE: An Easy Effects profile has mad the sound even better for me, see: https://github.com/karypid/YogaPro-16IMH9/issues/2 
 
 ### Keyboard special keys
 
